@@ -31,4 +31,51 @@ flop:
 
 End Sub
 
+Sub LoadDefaultStyles
+
+&apos; ----------------------------------------------------------------------
+&apos; Apply the styles of &quot;Default.ott&quot; without associating the document
+&apos; with this template.
+&apos; Set the current paragraph style to &quot;Text body&quot;
+&apos; ----------------------------------------------------------------------
+
+	dim document   as object
+	dim dispatcher as object
+	
+	document   = ThisComponent.CurrentController.Frame
+	dispatcher = createUnoService(&quot;com.sun.star.frame.DispatchHelper&quot;)
+
+
+rem ----------------------------------------------------------------------
+rem load default custom styles
+rem ----------------------------------------------------------------------
+
+	path=createunoservice(&quot;com.sun.star.util.PathSettings&quot;)
+	match = InStr(path.UserConfig,&quot;/config&quot;)
+	TemplatePath = Left(path.UserConfig,match)+&quot;template/Default.ott&quot;
+	
+	dim args(0) as new com.sun.star.beans.PropertyValue
+	sTemplateName = &quot;Default.ott&quot;
+	sURL = TemplatePath
+	args(0).Name = &quot;OverwriteStyles&quot;
+	args(0).Value = True
+	ThisComponent.stylefamilies.loadStylesFromURL( sURL, args() )
+
+rem ----------------------------------------------------------------------
+rem set paragraph style Text Body
+rem ----------------------------------------------------------------------
+
+	dim pStyles
+  	pStyles = ThisComponent.StyleFamilies.getByName(&quot;ParagraphStyles&quot;)
+	dim args1(1) as new com.sun.star.beans.PropertyValue
+	args1(0).Name = &quot;Template&quot;
+	args1(0).Value = pStyles.getByName(&quot;Text body&quot;).DisplayName
+	args1(1).Name = &quot;Family&quot;
+	args1(1).Value = 2
+	
+	dispatcher.executeDispatch(document, &quot;.uno:StyleApply&quot;, &quot;&quot;, 0, args1())
+
+
+End Sub
+
 </script:module>
