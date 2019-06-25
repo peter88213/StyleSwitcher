@@ -12,3 +12,5 @@ HOW TO LOCALIZE YOUR OOLoadStyles INSTALLATION
 3. (OpenOffice main menu) --> Tools --> Language --> For all Text 
 4. Select your language
 5. Save document. 
+
+The same for all other OTT Fempülate files.
