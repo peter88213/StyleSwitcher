@@ -36,8 +36,9 @@ rem --------------------------------------------------------
 rem Generate english README file with release info
 rem --------------------------------------------------------
 
-echo # OOLoadStyles (OpenOffice style loader) v%_release%>%_target%\README.txt
+echo OOLoadStyles (OpenOffice style loader) v%_release%>%_target%\README.txt
 echo For further information see https://github.com/peter88213/OOLoadStyles/wiki/>>%_target%\README.txt
+echo Icons made by Freepik (https://www.freepik.com) from Flaticon (https://www.flaticon.com) are licensed by Creative Commons BY 3.0 (http://creativecommons.org/licenses/by/3.0/).>>%_target%\README.txt
 
 rem --------------------------------------------------------
 rem Copy language dependent release items 
@@ -59,9 +60,9 @@ set _file=%_root%\oxt\OOLoadStyles-A-%_release%.oxt
 set _dest=%_target%\program\
 call :copyFile
 
-set _file=%_root%\oxt\OOLoadStyles-L-%_release%.oxt
-set _dest=%_target%\program\
-call :copyFile
+rem set _file=%_root%\oxt\OOLoadStyles-L-%_release%.oxt
+rem set _dest=%_target%\program\
+rem call :copyFile
 
 set _file=%_source%\ott\Default.ott
 set _dest=%_target%\program\
