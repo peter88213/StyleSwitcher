@@ -26,12 +26,12 @@ if __name__ == '__main__':
         with zipfile.ZipFile(odtdoc,'r') as myzip:
             myzip.extract(xmldoc)
             myzip.close
-        myTextFile = open(xmldoc,'r')
+        myTextFile = open(xmldoc,'r',encoding = 'utf-8')
         str = myTextFile.read()
         myTextFile.close()
         if re.search('<meta:template.*/>', str) != None:
             result = re.split('<meta:template.*/>', str)
-            myTextFile = open(xmldoc,'w')
+            myTextFile = open(xmldoc,'w',encoding = 'utf-8')
             myTextFile.write(result[0]+ result[1])
             myTextFile.close()
     except:
