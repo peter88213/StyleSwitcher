@@ -3,7 +3,7 @@
 ult.py 
 
 @summary: Unlink template from an ODT document (command line)
-Removes the "meta.template" entry.
+Extracts and modifies "meta.xml" removing the "meta.template" entry.
 
 Syntax: ult.py <ODT file to modify>
 
