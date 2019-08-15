@@ -8,7 +8,7 @@ REM license: The MIT License (https://opensource.org/licenses/mit-license.php)
 REM copyright: (c) 2019, Peter Triesberger
 REM since: 2019-06-25
 
-set _release=0.4.3
+set _release=1.0.0
 
 set _project=OOLoadStyles
 
@@ -60,9 +60,9 @@ set _file=%_root%\oxt\OOLoadStyles-A-%_release%.oxt
 set _dest=%_target%\program\
 call :copyFile
 
-rem set _file=%_root%\oxt\OOLoadStyles-L-%_release%.oxt
-rem set _dest=%_target%\program\
-rem call :copyFile
+set _file=%_root%\oxt\OOLoadStyles-L-%_release%.oxt
+set _dest=%_target%\program\
+call :copyFile
 
 set _file=%_source%\ott\Default.ott
 set _dest=%_target%\program\
