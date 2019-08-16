@@ -8,7 +8,7 @@ REM license: The MIT License (https://opensource.org/licenses/mit-license.php)
 REM copyright: (c) 2019, Peter Triesberger
 REM since: 2019-06-25
 
-set _release=1.0.0
+set _release=1.0.1
 
 set _project=OOLoadStyles
 
@@ -31,6 +31,9 @@ del /s /q %_target%
 mkdir %_target%\program
 del /s /q %_target%\program
 
+mkdir %_target%\add-on
+del /s /q %_target%\add-on
+copy %_source%\add-on\*.* %_target%\add-on\
 
 rem --------------------------------------------------------
 rem Generate english README file with release info
