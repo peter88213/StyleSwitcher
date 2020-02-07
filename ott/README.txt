@@ -13,4 +13,4 @@ HOW TO LOCALIZE YOUR OOLoadStyles INSTALLATION
 4. Select your language
 5. Save document. 
 
-The same for all other OTT Fempülate files.
+The same for all other OTT template files.
