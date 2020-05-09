@@ -2,10 +2,10 @@ rem @echo off
 REM cs.bat
 REM summary: Collects everything for a OOLoadStyles release
 REM          and puts it into localized setup directories to be zipped.
-REM author: Peter Triesberger
+REM author: peter88213
 REM see: https://github.com/peter88213/OOLoadStyles
 REM license: The MIT License (https://opensource.org/licenses/mit-license.php)
-REM copyright: (c) 2019, Peter Triesberger
+REM copyright: (c) 2019, peter88213
 REM since: 2019-06-25
 
 set _release=1.0.2
