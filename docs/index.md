@@ -1,0 +1,2 @@
+This extension provides a toolbar with buttons to quickly switch between the style sheets of different document templates. 
+However, unlike the [Template Changer](https://extensions.openoffice.org/en/project/template-changer) extension, Style Switcher does not create a hard link between the document and the template file.
