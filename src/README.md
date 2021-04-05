@@ -15,13 +15,11 @@ This will remove the ODT's links to any OTT (document template) file, leaving th
 
 ## Requirements
 * Python 3 installation (PATH must be set).
-* 7zip packer installation.
 
 ## Procedure
 1. Back up your `[userprofile]\Documents` folder.
-2. Move into `OOLoadStyles_vX.X.X\add-on` folder.
-3. Run `gen_list.bat` to generate `OOult.bat`.
-4. Edit `OOult.bat` and remove lines containing files you wish to omit.
-5. Run `OOult.bat`.
+2. Run `gen_list.bat` to generate `OOult.bat`.
+3. Edit `OOult.bat` and remove lines containing files you wish to omit.
+4. Run `OOult.bat`.
 
  
