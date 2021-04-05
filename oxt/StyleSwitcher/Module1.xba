@@ -97,5 +97,16 @@ Sub LoadPrintoutStyles
 
 End Sub
 
+Sub UnlinkTemplate
+
+&apos; ----------------------------------------------------------------------
+&apos; Disable the template association, if any.
+&apos; ----------------------------------------------------------------------
+
+    ThisComponent.DocumentProperties.TemplateName = &quot;&quot;
+    ThisComponent.DocumentProperties.TemplateURL = &quot;&quot;
+
+End Sub
+
 
 </script:module>
