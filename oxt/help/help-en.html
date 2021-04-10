@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
 <head>
     <meta charset="utf-8" />
-    <title>Help</title>
+    <title>StyleSwitcher Help</title>
     <style type='text/css'>
     <!--
     body {padding: 1em;}
@@ -14,9 +14,38 @@
     </style>
 </head>
 <body>
-<a href="https://peter88213.github.io/StyleSwitcher/">Visit the project website</a>
-<h1 id="style-switcher-for-libreoffice-and-openoffice">Style switcher for LibreOffice and OpenOffice</h1>
+<h1>StyleSwitcher Help</h1>
+<p><a href="https://peter88213.github.io/StyleSwitcher/">Project homepage</a></p>
 <h2 id="instructions-for-use">Instructions for use</h2>
-
+<h3 id="please-note">Please note:</h3>
+<p>This extension requires three document templates to be located in the <strong>template</strong> folder of the user profile:</p>
+<ul>
+<li><strong>Default.ott</strong> (optimized for screen display)</li>
+<li><strong>StandardPages.ott</strong> (<a href="https://en.wikipedia.org/wiki/Standard_manuscript_format">standard manuscript format</a>)</li>
+<li><strong>Printout.ott</strong> (optimized for print output)</li>
+</ul>
+<p>You must provide these templates yourself, which are described in <strong>using the toolbar</strong> . Sample template documents for customization can be downloaded <a href="https://peter88213.github.io/StyleSwitcher/samples/">here</a>.</p>
+<h2 id="place-the-toolbar">Place the toolbar</h2>
+<p>After installing the extension and restarting the office application, you will see a small toolbar.</p>
+<p><img src="Screenshots/Toolbar00-en.png" /></p>
+<p>You can dock it to a suitable place on the user interface.</p>
+<p><img src="Screenshots/Toolbar00dock-en.png" /></p>
+<h2 id="use-the-toolbar">Use the toolbar</h2>
+<p>There are four buttons: three for preset document templates, and one for a file selection dialog that lets you load the style sheets of any document template.</p>
+<p>The button with the gray screen icon loads the styles of the <strong>Default.ott</strong> document template, which are optimized for easy-to-read screen display. The margins are narrow, there are no headers and footers, and hyphenation is turned off.</p>
+<p><img src="Screenshots/Toolbar01-en.png" /></p>
+<p>The button with the red typewriter symbol loads the styles of the document template <strong>StandardPages.ott</strong> , which corresponds to the usual specifications of publishers for manuscripts. With a fixed-width font, it allows a standardized estimate of the total amount of text.</p>
+<p><img src="Screenshots/Toolbar02-en.png" /></p>
+<p>The button with the green printer icon loads the styles of the <strong>Printout.ott</strong> document template, which provides a readable and economical printout. The text is justified with hyphenation, the pages are numbered, the margins meet aesthetic criteria.</p>
+<p><img src="Screenshots/Toolbar03-en.png" /></p>
+<p>The button with the blue file cabinet icon opens a file selection dialog. This allows you to select a template file whose styles are to be applied. Be sure to use the correct file type (file extension “.ott”).</p>
+<p><img src="Screenshots/Toolbar04-en.png" /></p>
+<h2 id="use-the-styleswitcher-menu">Use the StyleSwitcher menu</h2>
+<p>In the <strong>Tools</strong> section of the main menu, there is a <strong>StyleSwitcher</strong> submenu under <strong>Add-Ons</strong> . In addition to the toolbar functions and a <strong>Help</strong> entry, here you will find a command to unlink the document from an associated document template.</p>
+<p><em>Note: this command is not used to undo an action of the StyleSwitcher extension. You may need it if you have created your document based on a document template, or if you have used the TemplateChanger extension to make an assignment that should no longer apply.</em></p>
+<p><img src="Screenshots/UserMenu-en.png" /></p>
+<h2 id="get-help">Get help</h2>
+<p>In the <strong>Help</strong> section of the main menu, there is a <strong>StyleSwitcher help</strong> submenu.</p>
+<p><img src="Screenshots/HelpMenu-en.png" /></p>
 </body>
 </html>
