@@ -1,10 +1,10 @@
 [Project homepage](index)
 
-# Sample document templates
+## Sample document templates
 
 Here are some sample template files. They are intended as source material for individual customizations. You might need a different language setting for the spell checker, or prefer different fonts. Download the template files and make them your own.
 
-## How to localize a template
+### How to localize a template
 
 1. Put `xxx.ott` into your OpenOffice/LibreOffice `user\template` directory. 
 2. Right-click `xxx.ott` and select `open`  (DO NOT DOUBLE CLICK) --> This starts Office Writer to modify the template.
@@ -13,7 +13,7 @@ Here are some sample template files. They are intended as source material for in
 5. Save document. 
 
 
-## Default.ott A4
+### Default.ott A4
 
 This document template is optimized for easy-to-read screen display. The margins are narrow, there are no headers and footers, and hyphenation is turned off.
 
@@ -24,7 +24,7 @@ This document template is optimized for easy-to-read screen display. The margins
 [Download Default.ott](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/ott/samples-de/Default.ott)
 
 
-## StandardPages.ott A4
+### StandardPages.ott A4
 
 This document template corresponds to the usual specifications of publishers for manuscripts ([Normseite](https://de.wikipedia.org/wiki/Normseite)). With a fixed-width font, it allows a standardized estimate of the total amount of text.
 
@@ -37,7 +37,7 @@ This document template corresponds to the usual specifications of publishers for
 [Download StandardPages.ott (A4)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/ott/samples-de/StandardPages.ott)
 
 
-## StandardPages.ott US-Letter
+### StandardPages.ott US-Letter
 
 This document template corresponds to the usual specifications of publishers for manuscripts ([Standard manuscript format](https://en.wikipedia.org/wiki/Standard_manuscript_format)). With a fixed-width font, it allows a standardized estimate of the total amount of text.
 
@@ -50,7 +50,7 @@ This document template corresponds to the usual specifications of publishers for
 [Download StandardPages.ott (US-Letter)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/ott/samples-en/StandardPages.ott)
 
 
-## Printout.ott A4
+### Printout.ott A4
 
 This document template provides a readable and economical printout. The text body is justified with hyphenation, the pages are numbered, the margins meet aesthetic criteria.
 
