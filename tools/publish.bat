@@ -1,6 +1,6 @@
 REM Prepare a newly compiled version for commit
 
-set _version=1.1.0
+set _version=1.2.0
 
 REM Delete the old version ...
 del ..\*.oxt
