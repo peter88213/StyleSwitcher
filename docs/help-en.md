@@ -11,7 +11,7 @@ This extension requires three document templates to be located in the __template
 *  __Printout.ott__  (optimized for print output)
 
 
-You must provide these templates yourself, which are described in  __using the toolbar__ . Sample template documents for customization can be downloaded [here](https://peter88213.github.io/StyleSwitcher/samples/).
+You must provide these templates yourself, which are described below. Sample template documents for customization can be downloaded [here](https://peter88213.github.io/StyleSwitcher/samples).
 
 
 ## Place the toolbar
