@@ -5,7 +5,8 @@ However, unlike the [_Template Changer_](https://extensions.openoffice.org/en/pr
 
 ### Please note:
 
-If this extension is to be of any use to you, you must understand the concept of document templates and styles. If this seems new to you, please launch the OpenOffice/LibreOffice help function first, and search for the appropriate keyword there. You will get a pretty good explanation of the principle and how it is applied. 
+If this extension is to be of any use to you, you must understand the concept of document templates and styles. If this seems new to you, you might want to take a look at this [introduction on the OpenOffice wiki](https://wiki.openoffice.org/wiki/Documentation/OOoAuthors_User_Manual/Writer_Guide/Introduction_to_Styles). 
+
 
 This extension requires three document templates to be located in the __template__ folder of the user profile: 
 
