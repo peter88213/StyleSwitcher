@@ -20,7 +20,7 @@ Unless you provide them yourself, StyleSwitcher can install supplied template do
 
 ## System requirements
 
-* __OpenOffice.org 3.x or Apache OpenOffice 4.x or LibreOffice 6.x__
+* __OpenOffice.org 3.x or Apache OpenOffice 4.x or LibreOffice 6+__
 * __Java__ (OpenOffice needs it for macro execution)
 
 ## Download and install
@@ -29,7 +29,7 @@ First, make sure there are document templates named __Default.ott__ , __Standard
 
 Then download the extension variant that matches your Office installation:
 
-[LibreOffice 6.x variant (StyleSwitcher-L-1.4.1.oxt)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/StyleSwitcher-L-1.4.1.oxt)
+[LibreOffice 6+ variant (StyleSwitcher-L-1.4.1.oxt)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/StyleSwitcher-L-1.4.1.oxt)
 
 [Apache OpenOffice 4.x variant (StyleSwitcher-A-1.4.1.oxt)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/StyleSwitcher-A-1.4.1.oxt)
 
