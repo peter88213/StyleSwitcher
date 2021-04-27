@@ -136,11 +136,11 @@ For each new document you will be asked whether you want to edit it for customiz
 
 
 If you click on the  __No__  button, the new template document will be saved "as is". In general, this 
-means that the document is set to "Windows" system fonts, German language and A4 paper size. 
+means that the document is set to "Windows" system fonts, A4 paper size, and no language. 
 
 If you click on the  __Yes__  button, StyleSwitcher will immediately load the template document. 
 
-If you are not writing in German, the first thing you will want to do is adjust the document language of the template.
+In order to enable your spell checker and localized smart quoting, the first thing you will want to do is adjust the document language of the template.
 
 
 ![](Screenshots/Customize00-en.png)
