@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE script:module PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "module.dtd">
+<script:module xmlns:script="http://openoffice.org/2000/script" script:name="Module2" script:language="StarBasic">REM  *****  BASIC  *****
+
+Sub install_templates
+
+&apos; ----------------------------------------------------------------------
+&apos; Install the templates coming with this package,
+&apos; if not already existent.
+&apos; ----------------------------------------------------------------------
+
+	&apos; Create a &quot;template&quot; directory in the user profile,
+	&apos; if not already existent
+
+	Dim configPath, targetPath As String
+
+	configPath=createunoservice(&quot;com.sun.star.util.PathSettings&quot;)
+	match = InStr(configPath.UserConfig,&quot;/config&quot;)
+	targetPath = ConvertFromURL(Left(configPath.UserConfig,match)+&quot;template/&quot;)
+	
+	On Error goto copy
+	MkDir(targetPath)
+	
+copy:
+	
+	Dim oPackageInfoProvider
+	Dim sPackageLocation, sourcePath, ottFile As String
+	
+	oPackageInfoProvider = GetDefaultContext.getByName(&quot;/singletons/com.sun.star.deployment.PackageInformationProvider&quot;)
+	sPackageLocation = oPackageInfoProvider.getPackageLocation(&quot;org.peter88213.StyleSwitcher&quot;)
+
+	sourcePath = ConvertFromURL(sPackageLocation + &quot;/ott/&quot;)
+
+	ottFile = Dir(sourcePath, 0)
+	
+	While ottFile  &lt;&gt; &quot;&quot;
+	
+		sourceFile = sourcePath + ottFile
+		targetFile = targetPath + ottFile
+
+		&apos; Copy the files that not already exist
+	
+		If Not FileExists(targetFile) Then
+			FileCopy(sourceFile, targetFile)
+			
+		End If
+		
+		ottFile = Dir
+	Wend
+
+End Sub
+</script:module>
