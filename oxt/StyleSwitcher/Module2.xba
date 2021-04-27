@@ -9,6 +9,19 @@ Sub install_templates
 &apos; if not already existent.
 &apos; ----------------------------------------------------------------------
 
+	Dim iBox as Integer
+	
+	iBox = MB_OKCANCEL + MB_DEFBUTTON1 + MB_ICONQUESTION
+
+	If MsgBox (&quot;This will add the missing template files to your &apos;template&apos; folder. &quot; &amp; _
+				&quot;Existing templates are not overwritten. You will be prompted to &quot; &amp; _
+				&quot;customize each new template. Then you can modify paper format, document &quot; &amp; _
+				&quot;language and, if necessary, appearance for your needs.&quot;, iBox) = IDCANCEL Then
+		MsgBox &quot;Action aborted by user.&quot; , MB_ICONSTOP 
+		Exit Sub 
+		
+	End If
+
 	&apos; Create a &quot;template&quot; directory in the user profile,
 	&apos; if not already existent
 
@@ -22,6 +35,9 @@ Sub install_templates
 	MkDir(targetPath)
 	
 copy:
+	Dim i as Integer
+	
+	i = 0
 	
 	Dim oPackageInfoProvider
 	Dim sPackageLocation, sourcePath, ottFile As String
@@ -32,9 +48,22 @@ copy:
 	sourcePath = ConvertFromURL(sPackageLocation + &quot;/ott/&quot;)
 
 	ottFile = Dir(sourcePath, 0)
+
+	&apos; Preparations for opening the copied template documents for customization
+
+	Dim templateFileProp(0) As New com.sun.star.beans.PropertyValue
+	templateFileProp(0).Name = &quot;AsTemplate&quot;
+	templateFileProp(0).Value = False
+	Dim Doc As Object
+	Dim Url As String
+	
+	iBox = MB_YESNO + MB_DEFBUTTON1 + MB_ICONQUESTION
+		
+	&apos; Run through the extension&apos;s template directory and copy every template
+	&apos; missing in the user template directory
 	
 	While ottFile  &lt;&gt; &quot;&quot;
-	
+		
 		sourceFile = sourcePath + ottFile
 		targetFile = targetPath + ottFile
 
@@ -42,11 +71,31 @@ copy:
 	
 		If Not FileExists(targetFile) Then
 			FileCopy(sourceFile, targetFile)
+			i = i + 1
+			
+			&apos; The user might want to customize it now.
+			
+			If MsgBox (&quot;Created template document &apos;&quot; + ottFile + &quot;&apos;. Do you wish to customize it now?&quot;, iBox) = IDYES Then	
+				
+				&apos; Open the template document in a new window
+				
+				Url = ConvertToURL(targetFile)
+				Doc = StarDesktop.loadComponentFromURL(Url, &quot;_blank&quot;, 0, templateFileProp())
+				
+			End If
 			
 		End If
 		
 		ottFile = Dir
 	Wend
+	
+	If i = 0 Then
+		MsgBox &quot;Nothing added. All the necessary templates already exist.&quot;, MB_ICONINFORMATION
+		
+	End If
 
 End Sub
+
+
+
 </script:module>

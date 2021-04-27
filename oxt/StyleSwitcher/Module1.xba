@@ -2,15 +2,46 @@
 <!DOCTYPE script:module PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "module.dtd">
 <script:module xmlns:script="http://openoffice.org/2000/script" script:name="Module1" script:language="StarBasic">REM  *****  BASIC  *****
 
-Sub LoadStyles
+Sub load_styles(TemplateName)
+&apos; ----------------------------------------------------------------------
+&apos; Apply the styles of a template without associating the document
+&apos; with this template.
+&apos; ----------------------------------------------------------------------
 
+	path=createunoservice(&quot;com.sun.star.util.PathSettings&quot;)
+	match = InStr(path.UserConfig,&quot;/config&quot;)
+	TemplatePath = Left(path.UserConfig,match)+&quot;template/&quot; + TemplateName
+	
+	If FileExists(TemplatePath) Then	
+		dim args(0) as new com.sun.star.beans.PropertyValue
+		args(0).Name = &quot;OverwriteStyles&quot;
+		args(0).Value = True
+		ThisComponent.stylefamilies.loadStylesFromURL(TemplatePath, args())
+		
+	Else
+		Dim iBox as Integer
+	
+		iBox = MB_YESNO + MB_DEFBUTTON2 + MB_ICONEXCLAMATION
+		
+		If MsgBox (&quot;Cannot assign the styles for now: The template you wish to assign does not exist. &quot; &amp; _
+		&quot;Do you want to install the missing templates now?&quot;, iBox) = IDYES Then
+			
+			Module2.install_templates
+			
+		End If
+				
+	End If
+
+End Sub
+
+
+Sub load_custom_styles
 &apos; ----------------------------------------------------------------------
 &apos; Apply a template&apos;s styles without associating the document
 &apos; with this template.
 &apos; The file picker dialog&apos;s default path is the
 &apos; &lt;OpenOffice user profile&gt;`template` directory.
 &apos; ----------------------------------------------------------------------
-
 
         dim args(0) as new com.sun.star.beans.PropertyValue
 
@@ -32,73 +63,27 @@ flop:
 End Sub
 
 
-Sub LoadDefaultStyles
-
-&apos; ----------------------------------------------------------------------
-&apos; Apply the styles of &quot;Default.ott&quot; without associating the document
-&apos; with this template.
-&apos; ----------------------------------------------------------------------
-
-	path=createunoservice(&quot;com.sun.star.util.PathSettings&quot;)
-	match = InStr(path.UserConfig,&quot;/config&quot;)
-	TemplatePath = Left(path.UserConfig,match)+&quot;template/Default.ott&quot;
+Sub load_default_styles
 	
-	dim args(0) as new com.sun.star.beans.PropertyValue
-	
-	sTemplateName = &quot;Default.ott&quot;
-	sURL = TemplatePath
-	args(0).Name = &quot;OverwriteStyles&quot;
-	args(0).Value = True
-	ThisComponent.stylefamilies.loadStylesFromURL( sURL, args() )
+	load_styles(&quot;Default.ott&quot;)
 
 End Sub
 
 
-Sub LoadStandardPageStyles
+Sub load_standard_styles
 
-&apos; ----------------------------------------------------------------------
-&apos; Apply the styles of &quot;StandardPages.ott&quot; without associating the document
-&apos; with this template.
-&apos; ----------------------------------------------------------------------
-
-	path=createunoservice(&quot;com.sun.star.util.PathSettings&quot;)
-	match = InStr(path.UserConfig,&quot;/config&quot;)
-	TemplatePath = Left(path.UserConfig,match)+&quot;template/StandardPages.ott&quot;
-	
-	dim args(0) as new com.sun.star.beans.PropertyValue
-
-	sTemplateName = &quot;StandardPages.ott&quot;
-	sURL = TemplatePath
-	args(0).Name = &quot;OverwriteStyles&quot;
-	args(0).Value = True
-	ThisComponent.stylefamilies.loadStylesFromURL( sURL, args() )
+	load_styles(&quot;StandardPages.ott&quot;)
 
 End Sub
 
 
-Sub LoadPrintoutStyles
+Sub load_printout_styles
 
-&apos; ----------------------------------------------------------------------
-&apos; Apply the styles of Printout.ott&quot; without associating the document
-&apos; with this template.
-&apos; ----------------------------------------------------------------------
-
-	path=createunoservice(&quot;com.sun.star.util.PathSettings&quot;)
-	match = InStr(path.UserConfig,&quot;/config&quot;)
-	TemplatePath = Left(path.UserConfig,match)+&quot;template/Printout.ott&quot;
+	load_styles(&quot;Printout.ott&quot;)
 	
-	dim args(0) as new com.sun.star.beans.PropertyValue
-
-	sTemplateName = &quot;Printout.ott&quot;
-	sURL = TemplatePath
-	args(0).Name = &quot;OverwriteStyles&quot;
-	args(0).Value = True
-	ThisComponent.stylefamilies.loadStylesFromURL( sURL, args() )
-
 End Sub
 
-Sub UnlinkTemplate
-
+Sub unlink_template
 &apos; ----------------------------------------------------------------------
 &apos; Disable the template association, if any.
 &apos; ----------------------------------------------------------------------
