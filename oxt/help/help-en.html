@@ -18,13 +18,13 @@
 <p><a href="https://peter88213.github.io/StyleSwitcher/">Project homepage</a></p>
 <h2 id="instructions-for-use">Instructions for use</h2>
 <h3 id="please-note">Please note:</h3>
-<p>This extension requires three document templates to be located in the <strong>template</strong> folder of the user profile:</p>
+<p>This extension requires three document templates to be located in the <strong>template</strong> folder of your user profile:</p>
 <ul>
 <li><strong>Default.ott</strong> (optimized for screen display)</li>
 <li><strong>StandardPages.ott</strong> (<a href="https://en.wikipedia.org/wiki/Standard_manuscript_format">standard manuscript format</a>)</li>
 <li><strong>Printout.ott</strong> (optimized for print output)</li>
 </ul>
-<p>You must provide these templates yourself, which are described below. Sample template documents for customization can be downloaded <a href="https://peter88213.github.io/StyleSwitcher/samples">here</a>.</p>
+<p>Unless you provide them yourself, StyleSwitcher can install supplied template documents on demand (see below). Existing template documents will not be overwritten. After installation, each template document can be automatically loaded to customize the language, paper size, etc.</p>
 <h2 id="place-the-toolbar">Place the toolbar</h2>
 <p>After installing the extension and restarting the office application, you will see a small toolbar.</p>
 <p><img src="Screenshots/Toolbar00-en.png" /></p>
@@ -32,7 +32,8 @@
 <p><img src="Screenshots/Toolbar00dock-en.png" /></p>
 <h2 id="use-the-toolbar">Use the toolbar</h2>
 <p>There are four buttons: three for preset document templates, and one for a file selection dialog that lets you load the style sheets of any document template.</p>
-<p>The button with the gray screen icon loads the styles of the <strong>Default.ott</strong> document template, which are optimized for easy-to-read screen display. The margins are narrow, there are no headers and footers, and hyphenation is turned off.</p>
+<h3 id="assign-styles">Assign styles</h3>
+<p>The toolbar button with the gray screen icon loads the styles of the <strong>Default.ott</strong> document template, which are optimized for easy-to-read screen display. The margins are narrow, there are no headers and footers, and hyphenation is turned off.</p>
 <p><img src="Screenshots/Toolbar01-en.png" /></p>
 <p>The button with the red typewriter symbol loads the styles of the document template <strong>StandardPages.ott</strong> , which corresponds to the usual specifications of publishers for manuscripts. With a fixed-width font, it allows a standardized estimate of the total amount of text.</p>
 <p><img src="Screenshots/Toolbar02-en.png" /></p>
@@ -40,10 +41,38 @@
 <p><img src="Screenshots/Toolbar03-en.png" /></p>
 <p>The button with the blue file cabinet icon opens a file selection dialog. This allows you to select a template file whose styles are to be applied. Be sure to use the correct file type (file extension “.ott”).</p>
 <p><img src="Screenshots/Toolbar04-en.png" /></p>
+<h3 id="if-the-selected-template-document-does-not-exist">If the selected template document does not exist …</h3>
+<p>If you try to load styles from a template that does not exist in your user profile’s <strong>template</strong> folder, StyleSwitcher cancels the operation and prompts you to install the template:</p>
+<p><img src="Screenshots/Message00-en.png" /></p>
+<p>Clicking on <strong>Yes</strong> will start the installation routine (see below). clicking on <strong>No</strong> will finish the current StyleSwitcher operation.</p>
 <h2 id="use-the-styleswitcher-menu">Use the StyleSwitcher menu</h2>
-<p>In the <strong>Tools</strong> section of the main menu, there is a <strong>StyleSwitcher</strong> submenu under <strong>Add-Ons</strong> . In addition to the toolbar functions and a <strong>Help</strong> entry, here you will find a command to unlink the document from an associated document template.</p>
-<p><em>Note: this command is not used to undo an action of the StyleSwitcher extension. You may need it if you have created your document based on a document template, or if you have used the TemplateChanger extension to make an assignment that should no longer apply.</em></p>
+<p>In the <strong>Tools</strong> section of the main menu, there is a <strong>StyleSwitcher</strong> submenu under <strong>Add-Ons</strong> .</p>
 <p><img src="Screenshots/UserMenu-en.png" /></p>
+<p>In addition to the toolbar functions and a <strong>Help</strong> entry, here you will find two commands:<br />
+<strong>Install missing template documents</strong> and <strong>Unlink associated template</strong> .</p>
+<h3 id="install-missing-template-documents">Install missing template documents</h3>
+<p>This will prompt you to install the template documents included with the StyleSwitcher extension. As mentioned before, existing templates will not be overwritten. So if you want to renew a template, you first must delete your file in your user profile’s <strong>template</strong> folder.</p>
+<p>Anyway, you will see a message before StyleSwitcher installs files:</p>
+<p><img src="Screenshots/Message01-en.png" /></p>
+<p>If you click on the <strong>OK</strong> button, StyleSwitcher will install all missing template documents. If the templates already exist, StyleSwitcher will cancel the Operation and show a message.</p>
+<p><img src="Screenshots/Message04-en.png" /></p>
+<p>If you click on the <strong>Cancel</strong> button when prompted for installation, the operation will be canceled.</p>
+<p><img src="Screenshots/Message02-en.png" /></p>
+<h4 id="customize-the-newly-installed-template-document">Customize the newly installed template document</h4>
+<p>For each new document you will be asked whether you want to edit it for customization now.</p>
+<p><img src="Screenshots/Message03-en.png" /></p>
+<p>If you click on the <strong>No</strong> button, the new template document will be saved “as is”. In general, this means that the document is set to “Windows” system fonts, German language and A4 paper size.</p>
+<p>If you click on the <strong>Yes</strong> button, StyleSwitcher will immediately load the template document.</p>
+<p>If you are not writing in German, the first thing you will want to do is adjust the document language of the template.</p>
+<p><img src="Screenshots/Customize00-en.png" /></p>
+<p>If your printer paper has a format other than A4, you can make the necessary settings in Writer’s <strong>Page Styles</strong> section.</p>
+<p><img src="Screenshots/Customize01-en.png" /></p>
+<p>Make sure to save and close all template documents before using the StyleSwitcher toolbar.</p>
+<p><em>Note: You can do customizations at any time later by loading the corresponding template document for editing.</em></p>
+<p><img src="Screenshots/Customize02-en.png" /></p>
+<h3 id="unlink-associated-template">Unlink associated template</h3>
+<p>You may need this operation if you have created your document based on a document template, or if you have used the TemplateChanger extension to make an assignment that should no longer apply. After having unlinked the initial template, you will no longer be prompted for template updates in case they have been modified.</p>
+<p><em>Note: this command is not used to undo an action of the StyleSwitcher extension.</em></p>
 <h2 id="get-help">Get help</h2>
 <p>In the <strong>Help</strong> section of the main menu, there is a <strong>StyleSwitcher help</strong> submenu.</p>
 <p><img src="Screenshots/HelpMenu-en.png" /></p>

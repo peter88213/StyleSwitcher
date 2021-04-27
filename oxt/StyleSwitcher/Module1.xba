@@ -23,8 +23,8 @@ Sub load_styles(TemplateName)
 	
 		iBox = MB_YESNO + MB_DEFBUTTON2 + MB_ICONEXCLAMATION
 		
-		If MsgBox (&quot;Cannot assign the styles for now: The template you wish to assign does not exist. &quot; &amp; _
-		&quot;Do you want to install the missing templates now?&quot;, iBox) = IDYES Then
+		If MsgBox (&quot;Cannot assign the styles for now: The selected template does not exist. &quot; &amp; _
+		&quot;Do you want to install the missing templates now?&quot;, iBox, &quot;StyleSwitcher&quot;) = IDYES Then
 			
 			Module2.install_templates
 			

@@ -13,11 +13,11 @@ Sub install_templates
 	
 	iBox = MB_OKCANCEL + MB_DEFBUTTON1 + MB_ICONQUESTION
 
-	If MsgBox (&quot;This will add the missing template files to your &apos;template&apos; folder. &quot; &amp; _
+	If MsgBox (&quot;This will add all missing template files to your &apos;template&apos; folder. &quot; &amp; _
 				&quot;Existing templates are not overwritten. You will be prompted to &quot; &amp; _
 				&quot;customize each new template. Then you can modify paper format, document &quot; &amp; _
-				&quot;language and, if necessary, appearance for your needs.&quot;, iBox) = IDCANCEL Then
-		MsgBox &quot;Action aborted by user.&quot; , MB_ICONSTOP 
+				&quot;language and, if necessary, appearance for your needs.&quot;, iBox, &quot;StyleSwitcher&quot;) = IDCANCEL Then
+		MsgBox &quot;Operation canceled by user.&quot; , MB_ICONSTOP, &quot;StyleSwitcher&quot; 
 		Exit Sub 
 		
 	End If
@@ -75,7 +75,7 @@ copy:
 			
 			&apos; The user might want to customize it now.
 			
-			If MsgBox (&quot;Created template document &apos;&quot; + ottFile + &quot;&apos;. Do you wish to customize it now?&quot;, iBox) = IDYES Then	
+			If MsgBox (&quot;Created template document &apos;&quot; + ottFile + &quot;&apos;. Do you wish to customize it now?&quot;, iBox, &quot;StyleSwitcher&quot;) = IDYES Then	
 				
 				&apos; Open the template document in a new window
 				
@@ -90,7 +90,7 @@ copy:
 	Wend
 	
 	If i = 0 Then
-		MsgBox &quot;Nothing added. All the necessary templates already exist.&quot;, MB_ICONINFORMATION
+		MsgBox &quot;Nothing added. All the necessary templates already exist.&quot;, MB_ICONINFORMATION, &quot;StyleSwitcher&quot;
 		
 	End If
 

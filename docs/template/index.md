@@ -15,7 +15,8 @@ This extension requires three document templates to be located in the __template
 *  __Printout.ott__  (optimized for print output)
 
 
-You must provide these templates yourself. Sample template documents for customization can be downloaded [here](samples).
+Unless you provide them yourself, StyleSwitcher can install supplied template documents on demand. 
+ 
 
 ## System requirements
 
