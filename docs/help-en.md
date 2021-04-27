@@ -82,7 +82,7 @@ cancels the operation and prompts you to install the template:
 
 
 
-Clicking on  __Yes__  will start the installation routine (see below). clicking on  __No__  will finish
+Clicking on  __Yes__  will start the installation routine (see below). Clicking on  __No__  will finish
 the current StyleSwitcher operation. 
 
 
