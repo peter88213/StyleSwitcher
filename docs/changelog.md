@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### v1.4.1 Service release
+
+Set the included template documents' language to "None".
+
+
 ### v1.4.0 Template documents included
 
 The StyleSwitcher extension now comes with template documents 
@@ -13,6 +18,7 @@ auto-loaded for customizing language, paper size etc.
 ### v1.2.0 Service update
 
 Complete help texts and documentation.
+
 
 ### v1.1.0 Pre-release
 
