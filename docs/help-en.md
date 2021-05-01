@@ -35,7 +35,7 @@ You can dock it to a suitable place on the user interface.
 There are four buttons: three for preset document templates, and one for a file selection dialog that 
 lets you load the style sheets of any document template.
 
-### Assign styles
+### Load styles
 
 The toolbar button with the gray screen icon loads the styles of the  __Default.ott__  document template, 
 which are optimized for easy-to-read screen display. The margins are narrow, there are no headers and footers, 

@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### v1.4.2 Service release
+
+Fix help and message texts by replacing "assign styles" with "load styles".
+
+
 ### v1.4.1 Service release
 
 Set the included template documents' language to "None".
