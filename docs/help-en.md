@@ -1,4 +1,6 @@
-[Project homepage](https://peter88213.github.io/StyleSwitcher/)
+[Project homepage](https://peter88213.github.io/StyleSwitcher/) > Instructions for use
+
+------------------------------------------------------------------------
 
 ## Instructions for use
 
