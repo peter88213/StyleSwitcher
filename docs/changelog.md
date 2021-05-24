@@ -1,4 +1,6 @@
-[Project homepage](index)
+[Project home page](index) > Changelog
+
+------------------------------------------------------------------------
 
 ## Changelog
 
