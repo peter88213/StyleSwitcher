@@ -10,6 +10,7 @@
 - The heading of level 4 is double-spaced.
 - The headings from level 5 down are single-spaced.
 - Switch off the chapter numbering.
+- Switch off the line numbering by default.
 
 ### v1.4.2 Service release
 
