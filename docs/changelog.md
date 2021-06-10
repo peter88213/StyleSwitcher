@@ -4,10 +4,11 @@
 
 ## Changelog
 
-### v1.4.3 Optimize templates
+### v1.4.3 Optimize the included templates
 
 - Show only the headings of levels 1-3 in the Navigator.
-- From level 4 down, all headings look the same.
+- The heading of level 4 is double-spaced.
+- The headings from level 5 down are single-spaced.
 - Switch off the chapter numbering.
 
 ### v1.4.2 Service release
