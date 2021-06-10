@@ -4,6 +4,12 @@
 
 ## Changelog
 
+### v1.4.3 Optimize templates
+
+- Show only the headings of levels 1-3 in the Navigator.
+- From level 4 down, all headings look the same.
+- Switch off the chapter numbering.
+
 ### v1.4.2 Service release
 
 Fix help and message texts by replacing "assign styles" with "load styles".
