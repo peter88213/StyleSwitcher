@@ -4,6 +4,10 @@
 
 ## Changelog
 
+### v1.4.4 Optimize the included StandardPages template
+
+- Set the letter spacing of the "Title" paragraph to default.
+
 ### v1.4.3 Optimize the included templates
 
 - Show only the headings of levels 1-3 in the Navigator.
