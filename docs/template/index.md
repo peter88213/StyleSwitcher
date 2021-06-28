@@ -25,7 +25,7 @@ Unless you provide them yourself, StyleSwitcher can install supplied template do
 
 ## Download and install
 
-First, make sure there are document templates named __Default.ott__ , __StandardPages.ott__ , and  __Printout.ott__ in the  __templates__  directory of your OpenOffice/LibreOffice user profile.
+Download the extension variant that matches your Office installation:
 
 Then download the extension variant that matches your Office installation:
 
