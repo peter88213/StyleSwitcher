@@ -44,7 +44,11 @@ Download the extension variant that matches your Office installation:
 
 See the [instructions for use](help-en)
 
-## CREDITS
+## Get updates
+
+This extension supports the update mechanism of OpenOffice/LibreOffice. You can let the Extension Manager check for updates from time to time to get the latest release.
+
+## Credits
 Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com) are licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/).
 
 [OpenOffice Extension Compiler](https://wiki.openoffice.org/wiki/Extensions_Packager#Extension_Compiler) by Bernard Marcelly.
