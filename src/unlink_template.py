@@ -3,7 +3,7 @@
 Unlink template from an ODT document (command line)
 Extracts and modifies "meta.xml" removing the "meta.template" entry.
 
-Copyright (c) 2021 Peter Triesberger
+Copyright (c) 2022 Peter Triesberger
 For further information see https://github.com/peter88213/StyleSwitcher
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
@@ -49,7 +49,7 @@ if __name__ == '__main__':
                         help='ODT document to process')
     args = parser.parse_args()
 
-    xmldoc = TEMPDIR + "/meta.xml"
+    xmldoc = f'{TEMPDIR}/meta.xml'
     odtdoc = args.sourcePath
 
     if os.path.isfile(odtdoc):
@@ -73,15 +73,15 @@ if __name__ == '__main__':
             result = re.split('<meta:template.*/>', text)
 
             with open(xmldoc, 'w', encoding='utf-8') as f:
-                f.write(result[0] + result[1])
+                f.write(f'{result[0]}{result[1]}')
 
             # Back up the odt document
 
             backupCount = 0
-            backupFile = odtdoc + '.bak'
+            backupFile = f'{odtdoc}.bak'
 
             while os.path.exists(backupFile):
-                backupFile = odtdoc + '.bk' + str(backupCount)
+                backupFile = f'{odtdoc}.bk{backupCount:03}'
                 backupCount += 1
 
             try:
@@ -93,27 +93,23 @@ if __name__ == '__main__':
                     os.chdir(TEMPDIR)
 
                     for file in contents:
-                        odfTarget.write(
-                            file, compress_type=zipfile.ZIP_DEFLATED)
+                        odfTarget.write(file, compress_type=zipfile.ZIP_DEFLATED)
 
                     os.chdir(workdir)
 
-                message = 'SUCCESS: Template removed from "' + \
-                    os.path.normpath(odtdoc) + '".'
+                message = f'SUCCESS: Template removed from "{os.path.normpath(odtdoc)}".'
 
             except PermissionError:
-                message = 'ERROR: Please close "' + \
-                    os.path.normpath(odtdoc) + '" first.'
+                message = f'ERROR: Please close "{os.path.normpath(odtdoc)}" first.'
 
         else:
-            message = '"' + os.path.normpath(
-                odtdoc) + '" is not linked to a template and remains unchanged.'
+            message = f'"{os.path.normpath(odtdoc)}" is not linked to a template and remains unchanged.'
 
         # Remove temporary directory
 
         tear_down(TEMPDIR)
 
     else:
-        message = 'ERROR: "' + os.path.normpath(odtdoc) + '" not found.'
+        message = f'ERROR: "{os.path.normpath(odtdoc)}" not found.'
 
     print(message)
