@@ -4,6 +4,10 @@
 
 ## Changelog
 
+### v1.4.6 Optimize the included StandardPages template
+
+- Use the "Consolas" font for "Quotations" paragraph style.
+
 ### v1.4.5 Optimize the included StandardPages template
 
 - Set up the "Quotations" paragraph style.
