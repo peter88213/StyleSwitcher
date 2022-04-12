@@ -4,6 +4,10 @@
 
 ## Changelog
 
+### v1.4.5 Optimize the included StandardPages template
+
+- Set up the "Quotations" paragraph style.
+
 ### v1.4.4 Optimize the included StandardPages template
 
 - Set the letter spacing of the "Title" paragraph to default.
