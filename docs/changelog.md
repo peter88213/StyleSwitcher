@@ -4,6 +4,11 @@
 
 ## Changelog
 
+### v1.4.7 Remove language settings from the templates
+
+- When creating a new document from a template, the system language is applied.
+- When applying a template to an existing document, its language settings are kept.
+
 ### v1.4.6 Optimize the included StandardPages template
 
 - Use the "Consolas" font for "Quotations" paragraph style.

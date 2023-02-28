@@ -29,11 +29,11 @@ Download the extension variant that matches your Office installation:
 
 Then download the extension variant that matches your Office installation:
 
-[LibreOffice 6+ variant (StyleSwitcher-L-1.4.6.oxt)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/StyleSwitcher-L-1.4.6.oxt)
+[LibreOffice 6+ variant (StyleSwitcher-L-1.4.7.oxt)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/StyleSwitcher-L-1.4.7.oxt)
 
-[Apache OpenOffice 4.x variant (StyleSwitcher-A-1.4.6.oxt)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/StyleSwitcher-A-1.4.6.oxt)
+[Apache OpenOffice 4.x variant (StyleSwitcher-A-1.4.7.oxt)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/StyleSwitcher-A-1.4.7.oxt)
 
-[OpenOffice.org 3.x variant (StyleSwitcher-1.4.6.oxt)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/StyleSwitcher-1.4.6.oxt)
+[OpenOffice.org 3.x variant (StyleSwitcher-1.4.7.oxt)](https://raw.githubusercontent.com/peter88213/StyleSwitcher/master/StyleSwitcher-1.4.7.oxt)
 
 * Installation right at download, by double-clicking on the downloaded file, or via the OpenOffice/LibreOffice Extension Manager.
 

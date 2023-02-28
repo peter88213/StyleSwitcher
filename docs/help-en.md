@@ -138,15 +138,9 @@ For each new document you will be asked whether you want to edit it for customiz
 
 
 If you click on the  __No__  button, the new template document will be saved "as is". In general, this 
-means that the document is set to "Windows" system fonts, A4 paper size, and no language. 
+means that the document is set to "Windows" system fonts, and A4 paper size. 
 
 If you click on the  __Yes__  button, StyleSwitcher will immediately load the template document. 
-
-In order to enable your spell checker and localized smart quoting, the first thing you will want to do is adjust the document language of the template.
-
-
-![](Screenshots/Customize00-en.png)
-
 
 
 If your printer paper has a format other than A4, you can make the necessary settings in Writer's  __Page Styles__  section.
@@ -174,6 +168,10 @@ You may need this operation if you have created your document based on a documen
 _Note: this command is not used to undo an action of the StyleSwitcher extension._
 
 
+## About language settings (western only)
+
+- When creating a new document from a template, the system language is applied.
+- When applying a template to an existing document, its language settings are kept.
 
 
 ## Get help
