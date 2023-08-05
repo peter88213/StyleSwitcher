@@ -1,2 +1,3 @@
-## CREDITS
-Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com) are licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/).
+# Credits
+
+Icons from [Eva Icons](https://akveo.github.io/eva-icons/#/) are published under the [MIT License](http://www.opensource.org/licenses/mit-license.php).

@@ -51,7 +51,7 @@ See the [instructions for use](help-en)
 This extension supports the update mechanism of OpenOffice/LibreOffice. You can let the Extension Manager check for updates from time to time to get the latest release.
 
 ## Credits
-Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com) are licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/).
+Icons from [Eva Icons](https://akveo.github.io/eva-icons/#/) are published under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
 
 [OpenOffice Extension Compiler](https://wiki.openoffice.org/wiki/Extensions_Packager#Extension_Compiler) by Bernard Marcelly.
 
