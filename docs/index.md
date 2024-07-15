@@ -21,7 +21,6 @@ Unless you provide them yourself, StyleSwitcher can install supplied template do
 ## System requirements
 
 * __OpenOffice.org 3.x or Apache OpenOffice 4.x or LibreOffice 6+__
-* __Java__ (OpenOffice needs it for macro execution)
 
 ## Download and install
 
