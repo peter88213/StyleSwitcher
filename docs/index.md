@@ -49,6 +49,17 @@ See the [instructions for use](help-en)
 
 This extension supports the update mechanism of OpenOffice/LibreOffice. You can let the Extension Manager check for updates from time to time to get the latest release.
 
+
+## See also
+
+- [curly](https://peter88213.github.io/curly/):
+  Conversion of "curly quotes", 
+  typographical apostrophes, ellipses and so on
+  in several languages.
+- [emph](https://peter88213.github.io/emph/):
+  Use character styles instead of direct formatting to mark up text.
+
+
 ## Credits
 Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com) are licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/).
 
@@ -58,3 +69,4 @@ Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.fla
 ## License
 
 This extension is distributed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+
